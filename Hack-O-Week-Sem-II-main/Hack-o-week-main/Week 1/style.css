@@ -1,0 +1,322 @@
+/* ========================= */
+/* GLOBAL RESET */
+/* ========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: #111111;
+    color: #eaeaea;
+}
+
+/* ========================= */
+/* NAVBAR */
+/* ========================= */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    background: #0b0b0b;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    animation: fadeIn 1s ease forwards;
+}
+
+.logo {
+    color: #7c3aed;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 25px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #d4d4d4;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #facc15;
+}
+
+/* ========================= */
+/* SHOW / HIDE LOGIC */
+/* ========================= */
+.hero,
+.section {
+    display: none;
+}
+
+/* Home visible by default */
+#home {
+    display: flex;
+}
+
+/* Show only clicked section */
+.hero:target,
+.section:target {
+    display: block;
+}
+
+/* Maintain hero flex */
+.hero:target {
+    display: flex;
+}
+
+/* ========================= */
+/* HERO */
+/* ========================= */
+.hero {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    animation: fadeUp 1s ease forwards;
+}
+
+.hero span {
+    color: #7c3aed;
+}
+
+.hero h3 {
+    margin: 10px 0;
+    color: #cfcfcf;
+    animation: fadeUp 1.2s ease forwards;
+}
+
+.hero p {
+    max-width: 600px;
+    margin-bottom: 25px;
+    color: #b5b5b5;
+    line-height: 1.7;
+    animation: fadeUp 1.4s ease forwards;
+}
+
+.hero-btns {
+    display: flex;
+    gap: 15px;
+    animation: fadeUp 1.6s ease forwards;
+}
+
+/* ========================= */
+/* BUTTONS */
+/* ========================= */
+.btn {
+    padding: 12px 28px;
+    border-radius: 30px;
+    background: linear-gradient(135deg, #7c3aed, #5b21b6);
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(124, 58, 237, 0.4);
+}
+
+.outline {
+    background: transparent;
+    border: 2px solid #facc15;
+    color: #facc15;
+}
+
+.outline:hover {
+    background: #facc15;
+    color: #111;
+}
+
+/* ========================= */
+/* SECTIONS */
+/* ========================= */
+.section {
+    padding: 80px 60px;
+    text-align: center;
+    animation: fadeUp 0.8s ease forwards;
+}
+
+.section h2 {
+    color: #facc15;
+    margin-bottom: 25px;
+    font-size: 32px;
+}
+
+.section p {
+    max-width: 800px;
+    margin: auto;
+    line-height: 1.8;
+    color: #cfcfcf;
+}
+
+/* Dark background sections */
+.dark {
+    background: #0b0b0b;
+}
+
+/* ========================= */
+/* SKILLS */
+/* ========================= */
+.skills-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.skill {
+    padding: 12px 22px;
+    background: #1a1a1a;
+    border-radius: 25px;
+    border: 1px solid #7c3aed;
+    transition: 0.3s;
+}
+
+.skill:hover {
+    transform: scale(1.08);
+    background: #7c3aed;
+    color: white;
+}
+
+/* ========================= */
+/* SERVICES & PROJECTS */
+/* ========================= */
+.services-container,
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.service-card,
+.project-card {
+    background: #111;
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid #222;
+    transition: 0.3s;
+}
+
+.service-card:hover,
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(124, 58, 237, 0.25);
+}
+
+/* ========================= */
+/* EDUCATION TIMELINE */
+/* ========================= */
+.timeline {
+    max-width: 650px;
+    margin: auto;
+    margin-top: 30px;
+}
+
+.timeline-item {
+    background: #111;
+    padding: 25px;
+    margin: 20px 0;
+    border-left: 4px solid #7c3aed;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.timeline-item:hover {
+    transform: translateX(5px);
+}
+
+/* ========================= */
+/* ACHIEVEMENTS */
+/* ========================= */
+.achievements {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.achievements li {
+    margin: 12px 0;
+    color: #d4d4d4;
+}
+
+/* ========================= */
+/* CONTACT */
+/* ========================= */
+.contact-form {
+    max-width: 420px;
+    margin: auto;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form input,
+.contact-form textarea {
+    margin: 10px 0;
+    padding: 12px;
+    background: #1a1a1a;
+    border: none;
+    border-radius: 8px;
+    color: white;
+}
+
+/* ========================= */
+/* FOOTER */
+/* ========================= */
+footer {
+    background: #0b0b0b;
+    padding: 20px;
+    text-align: center;
+    color: #9ca3af;
+    font-size: 14px;
+}
+
+/* ========================= */
+/* ANIMATIONS */
+/* ========================= */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
